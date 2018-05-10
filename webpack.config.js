@@ -26,24 +26,15 @@ if (process.env.NODE_ENV !== 'production') {
 }else{
     mode = 'production'
     entry = {
-        main: './src/index.js',
-        vendor: [
-          'date-fns/distance_in_words',
-          'react', 
-          'react-dom',
-          'react-redux',
-          'react-router-redux',
-          'react-router',
-          'redux-thunk',
-          'redux',
-          'socket.io-client',
-          'superagent'
-        ]
+        main: './src/index.js'
     }
     output = {
         path: path.join(__dirname, [ '/', config.get('buildDirectory') ].join('')),
         filename: '[name].bundle.js'
     }
+    plugins = [
+        new webpack.DefinePlugin({ __DEV__: false, 'process.env.NODE_ENV': "'production'" })
+      ];
     rules = [
         { 
             test: /\.(js|jsx)$/, 
@@ -61,24 +52,6 @@ if (process.env.NODE_ENV !== 'production') {
         },
     ]
 }
-// module.exports = {
-//     mode: 'development',
-//     entry: './src/index.js',
-//     output: {
-//         path: path.join(__dirname, [ '/', config.get('buildDirectory') ].join('')),
-//         filename: 'bundle.js',
-//         publicPath: 'http://localhost:3001/',      
-//     },
-//     module: {
-//         rules: [
-//             { 
-//                 test: /\.(js|jsx)$/, 
-//                 loader: 'babel-loader',
-//                 exclude: /node_modules/,
-//             },
-//         ]
-//     },
-// }
 
 module.exports = {
     devtool: 'source-map',

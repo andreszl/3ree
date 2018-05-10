@@ -6,8 +6,8 @@
   "scripts": {
     "build": "set NODE_ENV=development&&webpack --display-chunks",
     "build:prod": "set NODE_ENV=production&&webpack --display-chunks",
-    "start": "set NODE_ENV=development&& node start.js",
-    "start:prod": "set NODE_ENV=production&& node server.babel.js"
+    "start": "set NODE_ENV=development&& node server.dev.js",
+    "start:prod": "set NODE_ENV=production&& node server.prod.js"
   },
   "repository": {
     "type": "git",
@@ -51,14 +51,17 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "body-parser": "^1.18.2",
     "config": "^1.30.0",
     "date-fns": "^1.29.0",
     "ejs": "^2.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-loadable": "^5.4.0",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "react-router-redux": "^4.0.8",
     "redux": "^4.0.0",
     "redux-thunk": "^2.2.0",

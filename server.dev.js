@@ -1,2 +1,2 @@
-require('./server.babel.js')
+require('./server.prod.js')
 require('./server.webpack.js')
