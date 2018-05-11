@@ -1,20 +1,10 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
+import Home from './components/Home.jsx'
+const routes =  [
+  {
+    path: '/',
+    exact: true,
+    component: Home,
+  }
+]
 
-import App from './components/App'
-
-class Routes extends Component{
-    render(){
-        return(
-            <Router>
-                <div>
-                    <Switch>
-                        <Route exact path="/" component={App} />
-                    </Switch>
-                </div>
-            </Router>
-        )
-    }
-}
-
-export default Routes
+export default routes
