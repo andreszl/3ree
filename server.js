@@ -1,10 +1,10 @@
 'use strict'
 
 // package's
-import path from 'path';
+import path from 'path'
 import express from 'express'
-import http from 'http';
-import config from 'config';
+import http from 'http'
+import config from 'config'
 
 // serve instances
 const server = express()
@@ -25,4 +25,4 @@ server.get('*', (req, res) => {res.render('index',{title: 'its work'})})
 //initialize server
 httpServer.listen(port, (err) => {
     console.log(`server running on ${port}...`)
-});
+})
