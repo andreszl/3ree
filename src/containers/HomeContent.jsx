@@ -8,8 +8,8 @@ class HomeContent extends Component{
     render(){
         return(
             <div>
-                <h1>{this.props.title}</h1>
-                <p>Home text</p>
+                <h3>Title Home Content</h3>
+                <p>Desc Home Content </p>
             </div>
         )
     }

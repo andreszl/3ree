@@ -3,8 +3,11 @@ import HomeContent from '../containers/HomeContent.jsx'
 
 class Home extends Component {
     render(){
-        return (
-            <HomeContent title={"Home"} />              
+        return ( 
+            <div>
+                <h1>Home Component </h1>   
+                <HomeContent /> 
+            </div>          
         )
     }
 }
