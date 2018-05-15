@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import HomeContent from '../containers/HomeContent.jsx'
+import HomeContent from '../containers/HomeContent'
 
 class Home extends Component {
     render(){
