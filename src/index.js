@@ -1,14 +1,13 @@
 
 import React from 'react'
-import Routes from './routes'
 
 import { hydrate } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-import App from './components/App.jsx'
+import Routes from './routes/Routes'
 
 hydrate(
   <BrowserRouter>
-    <App initialState={window.__INITIAL_STATE__}/>
+    <Routes/>
   </BrowserRouter>,
   document.getElementById('app')
 )

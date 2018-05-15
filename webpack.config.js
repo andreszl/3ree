@@ -44,7 +44,7 @@ if (process.env.NODE_ENV !== 'production') {
                 comments: false,
                 presets: [
                   'env',
-                  'react'
+                  'react',
                 ],
               },
               exclude: /node_modules/,
