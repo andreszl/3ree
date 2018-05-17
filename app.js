@@ -7,13 +7,17 @@ import { Provider } from 'react-redux'
 import Routes from './src/routes/Routes'
 
 export function handleRender(req, res, next) {
-    
-    let initialState = {}
-    
-    const html = renderToString(
-        <StaticRouter location={req.url} context={initialState}>
-            <Routes/>
-        </StaticRouter>
-    )
-    res.render('index', { html: html, initialState: JSON.stringify(initialState)})
+    console.log(' [x] Request for', req.url)
+        
+        let initialState = {}
+
+        const html = renderToString(
+            <StaticRouter location={req.url} context={{}}>
+                <App />
+            </StaticRouter>
+        )
+        res.render('index', { html: html, initialState: JSON.stringify(initialState)})
+
+
+    // Send the rendered page back to the client with the initial state
   }
