@@ -1,10 +1,11 @@
-//pakage
 import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { RouterContext, StaticRouter, matchPath  } from 'react-router-dom'
-import { Provider } from 'react-redux'
+import App from './src/components/App.jsx'
+import routes from './src/routes'
 
-import Routes from './src/routes/Routes'
+
+const isDev = (process.env.NODE_ENV !== 'production')
 
 export function handleRender(req, res, next) {
     console.log(' [x] Request for', req.url)
