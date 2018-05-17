@@ -9,14 +9,11 @@ const isDev = (process.env.NODE_ENV !== 'production')
 
 export function handleRender(req, res, next) {
     console.log(' [x] Request for', req.url)
-    console.log(routes)
-
-     let initialState = {}
-
-    const activeRoute = routes.find((route) => matchPath(req.url, route)) || {}
+        
+        let initialState = {}
 
         const html = renderToString(
-            <StaticRouter location={req.url} context={activeRoute}>
+            <StaticRouter location={req.url} context={{}}>
                 <App />
             </StaticRouter>
         )

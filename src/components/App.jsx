@@ -8,16 +8,16 @@ class App extends Component {
     return (
       <div>
         <Switch>
-         {routes.map(({ path, exact, component: C}) => (
-            <Route
-              key={path}
-              path={path}
-              exact={exact}
-              render={(props) => (<C {...props} />)}
-            />
-          ))}
+          {routes.map(({ path, exact, component: C}) => (
+              <Route
+                key={path}
+                path={path}
+                exact={exact}
+                render={(props) => (<C {...props} />)}
+              />
+            ))}
         </Switch>
-        <DevTools />
+
       </div>
     )
   }
