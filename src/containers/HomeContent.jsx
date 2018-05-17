@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class HomeContent extends Component{
     constructor(props){
@@ -9,14 +8,8 @@ class HomeContent extends Component{
     render(){
         return(
             <div>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                         <Link to="/About">About</Link>
-                    </li>
-                </ul>
+                <h3>Title Home Content</h3>
+                <p>Desc Home Content </p>
             </div>
         )
     }
